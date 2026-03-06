@@ -4,12 +4,12 @@
 
 ## Контекст
 
-- **Заметки:** {{WORKSPACE_DIR}}/DS-strategy/inbox/[fleeting-notes.md](https://github.com/{{GITHUB_USER}}/DS-strategy/blob/main/inbox/fleeting-notes.md)
-- **НЭП:** {{WORKSPACE_DIR}}/DS-strategy/docs/Dissatisfactions.md
-- **Стратегия:** {{WORKSPACE_DIR}}/DS-strategy/docs/Strategy.md
-- **План недели:** {{WORKSPACE_DIR}}/DS-strategy/current/WeekPlan W*.md
-- **Inbox Экстрактора:** {{WORKSPACE_DIR}}/DS-strategy/inbox/captures.md
-- **MEMORY:** ~/.claude/projects/{{CLAUDE_PROJECT_SLUG}}/memory/MEMORY.md
+- **Заметки:** /home/misha/Github/DS-strategy/inbox/[fleeting-notes.md](https://github.com/testo97/DS-strategy/blob/main/inbox/fleeting-notes.md)
+- **НЭП:** /home/misha/Github/DS-strategy/docs/Dissatisfactions.md
+- **Стратегия:** /home/misha/Github/DS-strategy/docs/Strategy.md
+- **План недели:** /home/misha/Github/DS-strategy/current/WeekPlan W*.md
+- **Inbox Экстрактора:** /home/misha/Github/DS-strategy/inbox/captures.md
+- **MEMORY:** ~/.claude/projects/-home-misha-Github/memory/MEMORY.md
 
 ## Предусловие
 
@@ -73,7 +73,7 @@
 - **Личные данные → personal/:** Контакт/телефон → `personal/contacts.md`. Аккаунт/логин/URL → `personal/accounts.md`. Токен/ключ/пароль → `personal/secrets.md`. Прочие справочные данные → `personal/reference.md`
 
 **Проверка актуальности (обязательно перед классификацией):**
-- Сверь заметку с коммитами за сегодня (`git log --since="00:00" --all --oneline` по всем {{WORKSPACE_DIR}}/ репо) и текущим WeekPlan
+- Сверь заметку с коммитами за сегодня (`git log --since="00:00" --all --oneline` по всем /home/misha/Github/ репо) и текущим WeekPlan
 - Если задача из заметки **уже сделана** (есть коммит или РП done) → Шум (зачеркнуть), не тянуть в план
 - Если проблема из заметки **уже решена** → Шум
 - Если заметка ссылается на ситуацию, которая **изменилась** за день → оценить с учётом нового контекста

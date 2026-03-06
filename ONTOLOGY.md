@@ -167,13 +167,13 @@ Governance-хаб для управления задачами и стратег
 
 | Переменная | Назначение | Когда |
 |------------|-----------|-------|
-| `{{GITHUB_USER}}` | GitHub username | setup.sh |
-| `{{WORKSPACE_DIR}}` | Рабочая директория | setup.sh |
-| `{{TIMEZONE_HOUR}}` | Час запуска стратега (UTC) | setup.sh |
-| `{{TIMEZONE_DESC}}` | Описание времени | setup.sh |
-| `{{CLAUDE_PATH}}` | Путь к Claude CLI | setup.sh |
-| `{{HOME_DIR}}` | Домашняя директория | setup.sh |
-| `{{CLAUDE_PROJECT_SLUG}}` | Slug проекта Claude | setup.sh |
+| `testo97` | GitHub username | setup.sh |
+| `/home/misha/Github` | Рабочая директория | setup.sh |
+| `2` | Час запуска стратега (UTC) | setup.sh |
+| `5:00` | Описание времени | setup.sh |
+| `/home/misha/.local/bin/claude` | Путь к Claude CLI | setup.sh |
+| `/home/misha` | Домашняя директория | setup.sh |
+| `-home-misha-Github` | Slug проекта Claude | setup.sh |
 
 Подставляются один раз при развёртывании (setup.sh) и далее не меняются.
 
