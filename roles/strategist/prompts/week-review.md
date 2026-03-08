@@ -7,7 +7,7 @@
 
 ## Контекст
 
-- **WeekPlan:** /home/misha/Github/DS-strategy/current/WeekPlan W*.md
+- **WeekPlan:** /Users/user/Github/DS-strategy/current/WeekPlan W*.md
 - **Шаблон:** см. секцию «Шаблон WeekReport» ниже
 
 ### 0. WakaTime — время работы за неделю
@@ -23,11 +23,11 @@
 ### 1. Сбор данных (Стратег собирает сам)
 
 ```bash
-# Для КАЖДОГО репо в /home/misha/Github/:
-git -C /home/misha/Github/<repo> log --since="last monday 00:00" --until="today 00:00" --oneline --no-merges
+# Для КАЖДОГО репо в /Users/user/Github/:
+git -C /Users/user/Github/<repo> log --since="last monday 00:00" --until="today 00:00" --oneline --no-merges
 ```
 
-- Пройди по ВСЕМ репозиториям в `/home/misha/Github/`
+- Пройди по ВСЕМ репозиториям в `/Users/user/Github/`
 - Загрузи текущий WeekPlan из `DS-strategy/current/`
 - Сопоставь коммиты с РП из WeekPlan
 - Определи статус каждого РП: done / partial / not started
@@ -61,12 +61,12 @@ git -C /home/misha/Github/<repo> log --since="last monday 00:00" --until="today 
 ### 6. Создать пост для клуба (опционально)
 
 > Шаг выполняется только если у пользователя настроен Knowledge Index — surface downstream репо для публикаций.
-> Проверь: существует ли директория `/home/misha/Github/DS-Knowledge-Index-testo97/`?
+> Проверь: существует ли директория `/Users/user/Github/DS-Knowledge-Index-testo97/`?
 > Если нет — пропусти шаг 6 полностью.
 
 1. Переключись на **роль Автора (R4)** и на основе WeekReport сформируй пост для клуба.
 
-   **Обязательно прочитай** `/home/misha/Github/DS-Knowledge-Index-testo97/CLAUDE.md` — полные инструкции роли Автора:
+   **Обязательно прочитай** `/Users/user/Github/DS-Knowledge-Index-testo97/CLAUDE.md` — полные инструкции роли Автора:
    - § 2 — стандарт названий для итогов недели
    - § 3 — формат поста: аудитория `community`, структура для тега `итоги-недели`
 
@@ -80,7 +80,7 @@ git -C /home/misha/Github/<repo> log --since="last monday 00:00" --until="today 
 
    Выбери лучшее название сам (в автоматическом режиме нет пользователя для выбора).
 
-2. Создай файл `/home/misha/Github/DS-Knowledge-Index-testo97/docs/{YYYY}/{YYYY-MM-DD}-week-review-w{N}.md`
+2. Создай файл `/Users/user/Github/DS-Knowledge-Index-testo97/docs/{YYYY}/{YYYY-MM-DD}-week-review-w{N}.md`
 
 3. Frontmatter:
 
@@ -98,7 +98,7 @@ content_plan: null
 ---
 ```
 
-4. Обнови `/home/misha/Github/DS-Knowledge-Index-testo97/docs/README.md` — добавь строку в начало текущего месяца
+4. Обнови `/Users/user/Github/DS-Knowledge-Index-testo97/docs/README.md` — добавь строку в начало текущего месяца
 5. Закоммить и запушь Knowledge Index (git add docs/ && git commit && git push)
 
 **Шаблон WeekReport:**

@@ -4,9 +4,9 @@
 
 ## Контекст
 
-- **HUB (личные планы):** /home/misha/Github/DS-strategy/current/
-- **SPOKE (планы репо):** /home/misha/Github/*/WORKPLAN.md
-- **MEMORY:** ~/.claude/projects/-home-misha-Github/memory/MEMORY.md
+- **HUB (личные планы):** /Users/user/Github/DS-strategy/current/
+- **SPOKE (планы репо):** /Users/user/Github/*/WORKPLAN.md
+- **MEMORY:** ~/.claude/projects/-Users-user-Github/memory/MEMORY.md
 
 ## Именование файлов в current/
 
@@ -36,11 +36,11 @@ DS-strategy/
 **Стратег ОБЯЗАН** собрать коммиты за вчерашний день самостоятельно:
 
 ```bash
-# Для КАЖДОГО репо в /home/misha/Github/:
-git -C /home/misha/Github/<repo> log --since="yesterday 00:00" --until="today 00:00" --oneline --no-merges
+# Для КАЖДОГО репо в /Users/user/Github/:
+git -C /Users/user/Github/<repo> log --since="yesterday 00:00" --until="today 00:00" --oneline --no-merges
 ```
 
-- Пройди по ВСЕМ репозиториям в `/home/misha/Github/`
+- Пройди по ВСЕМ репозиториям в `/Users/user/Github/`
 - Сгруппируй коммиты по репозиториям
 - Сопоставь коммиты с РП из недельного плана
 - Определи статус каждого затронутого РП: done / partial / not started

@@ -13,11 +13,11 @@ set -e
 # Конфигурация
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 REPO_DIR="$(dirname "$SCRIPT_DIR")"
-WORKSPACE="/home/misha/Github"
+WORKSPACE="/Users/user/Github"
 PROMPTS_DIR="$REPO_DIR/prompts"
-LOG_DIR="/home/misha/logs/extractor"
-CLAUDE_PATH="/home/misha/.local/bin/claude"
-ENV_FILE="/home/misha/.config/aist/env"
+LOG_DIR="/Users/user/logs/extractor"
+CLAUDE_PATH="/opt/homebrew/bin/claude"
+ENV_FILE="/Users/user/.config/aist/env"
 
 # AI CLI: переопределение через переменные окружения (см. strategist.sh)
 AI_CLI="${AI_CLI:-$CLAUDE_PATH}"

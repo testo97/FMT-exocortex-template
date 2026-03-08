@@ -15,7 +15,7 @@
 ## Конфигурация
 
 > Перед обработкой прочитай:
-> 1. `/home/misha/Github/FMT-exocortex-template/roles/extractor/config/routing.md` — таблицы маршрутизации
+> 1. `/Users/user/Github/FMT-exocortex-template/roles/extractor/config/routing.md` — таблицы маршрутизации
 
 ## Алгоритм
 

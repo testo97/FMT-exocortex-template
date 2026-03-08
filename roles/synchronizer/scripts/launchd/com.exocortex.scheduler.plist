@@ -7,7 +7,7 @@
 
     <key>ProgramArguments</key>
     <array>
-        <string>/home/misha/Github/FMT-exocortex-template/roles/synchronizer/scripts/scheduler.sh</string>
+        <string>/Users/user/Github/FMT-exocortex-template/roles/synchronizer/scripts/scheduler.sh</string>
         <string>dispatch</string>
     </array>
 
@@ -18,7 +18,7 @@
          6:00  — extractor + daily-report
          9:00  — extractor
          12:00 — extractor
-         15:00 — extractor
+         17:00 EKB — extractor
          18:00 — extractor
          21:00 — extractor
          23:00 — strategist note-review
@@ -38,17 +38,17 @@
     </array>
 
     <key>StandardOutPath</key>
-    <string>/home/misha/logs/synchronizer/launchd-scheduler.log</string>
+    <string>/Users/user/logs/synchronizer/launchd-scheduler.log</string>
 
     <key>StandardErrorPath</key>
-    <string>/home/misha/logs/synchronizer/launchd-scheduler-error.log</string>
+    <string>/Users/user/logs/synchronizer/launchd-scheduler-error.log</string>
 
     <key>EnvironmentVariables</key>
     <dict>
         <key>PATH</key>
         <string>/usr/local/bin:/usr/bin:/bin:/opt/homebrew/bin</string>
         <key>HOME</key>
-        <string>/home/misha</string>
+        <string>/Users/user</string>
     </dict>
 
     <key>RunAtLoad</key>

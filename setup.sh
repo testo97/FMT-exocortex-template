@@ -190,14 +190,14 @@ echo ""
 echo "[1/6] Configuring placeholders..."
 
 find "$TEMPLATE_DIR" -type f \( -name "*.md" -o -name "*.json" -o -name "*.sh" -o -name "*.plist" -o -name "*.yaml" -o -name "*.yml" \) | while read file; do
-    sed -i \
+    sed -i '' \
         -e "s|testo97|$GITHUB_USER|g" \
-        -e "s|/home/misha/Github|$WORKSPACE_DIR|g" \
-        -e "s|/home/misha/.local/bin/claude|$CLAUDE_PATH|g" \
-        -e "s|-home-misha-Github|$CLAUDE_PROJECT_SLUG|g" \
+        -e "s|/Users/user/Github|$WORKSPACE_DIR|g" \
+        -e "s|/opt/homebrew/bin/claude|$CLAUDE_PATH|g" \
+        -e "s|-Users-user-Github|$CLAUDE_PROJECT_SLUG|g" \
         -e "s|2|$TIMEZONE_HOUR|g" \
-        -e "s|5:00|$TIMEZONE_DESC|g" \
-        -e "s|/home/misha|$HOME_DIR|g" \
+        -e "s|7:00 EKB|$TIMEZONE_DESC|g" \
+        -e "s|/Users/user|$HOME_DIR|g" \
         "$file"
 done
 

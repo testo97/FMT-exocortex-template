@@ -4,11 +4,11 @@
 
 ## Контекст
 
-- **HUB (личные планы):** /home/misha/Github/DS-strategy/current/
-- **Документы стратегии:** /home/misha/Github/DS-strategy/docs/ (Strategy.md, Dissatisfactions.md, Session Agenda.md)
-- **Inbox:** /home/misha/Github/DS-strategy/inbox/
-- **SPOKE (планы репо):** /home/misha/Github/*/WORKPLAN.md
-- **MEMORY:** ~/.claude/projects/-home-misha-Github/memory/MEMORY.md
+- **HUB (личные планы):** /Users/user/Github/DS-strategy/current/
+- **Документы стратегии:** /Users/user/Github/DS-strategy/docs/ (Strategy.md, Dissatisfactions.md, Session Agenda.md)
+- **Inbox:** /Users/user/Github/DS-strategy/inbox/
+- **SPOKE (планы репо):** /Users/user/Github/*/WORKPLAN.md
+- **MEMORY:** ~/.claude/projects/-Users-user-Github/memory/MEMORY.md
 
 ## Предусловие
 

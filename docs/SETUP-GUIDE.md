@@ -380,7 +380,7 @@ pmset -g sched
 
 # Установить пробуждение в 3:55 ежедневно (за 5 мин до Стратега)
 # Требует пароль администратора. Mac должен быть подключён к питанию.
-sudo pmset repeat wakeorpoweron MTWRFSU 03:55:00
+sudo pmset repeat wakeorpoweron MTWRFSU 03:57:00 EKB
 ```
 
 > **Как это работает:** Mac просыпается в 3:55, launchd запускает scheduler в 4:00, план готов к ~4:20. Ты встаёшь — план уже есть.

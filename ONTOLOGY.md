@@ -168,12 +168,12 @@ Governance-хаб для управления задачами и стратег
 | Переменная | Назначение | Когда |
 |------------|-----------|-------|
 | `testo97` | GitHub username | setup.sh |
-| `/home/misha/Github` | Рабочая директория | setup.sh |
+| `/Users/user/Github` | Рабочая директория | setup.sh |
 | `2` | Час запуска стратега (UTC) | setup.sh |
-| `5:00` | Описание времени | setup.sh |
-| `/home/misha/.local/bin/claude` | Путь к Claude CLI | setup.sh |
-| `/home/misha` | Домашняя директория | setup.sh |
-| `-home-misha-Github` | Slug проекта Claude | setup.sh |
+| `7:00 EKB` | Описание времени | setup.sh |
+| `/opt/homebrew/bin/claude` | Путь к Claude CLI | setup.sh |
+| `/Users/user` | Домашняя директория | setup.sh |
+| `-Users-user-Github` | Slug проекта Claude | setup.sh |
 
 Подставляются один раз при развёртывании (setup.sh) и далее не меняются.
 

@@ -30,13 +30,13 @@
 ```markdown
 | Домен | Pack | Префикс | Путь |
 |-------|------|---------|------|
-| Мой домен | PACK-my-domain | MD | /home/misha/Github/PACK-my-domain/pack/my-domain/ |
+| Мой домен | PACK-my-domain | MD | /Users/user/Github/PACK-my-domain/pack/my-domain/ |
 ```
 
 ### 2. (Опционально) Установи автоматический inbox-check
 
 ```bash
-cd /home/misha/Github/FMT-exocortex-template/roles/extractor
+cd /Users/user/Github/FMT-exocortex-template/roles/extractor
 bash install.sh
 ```
 
@@ -46,10 +46,10 @@ bash install.sh
 
 ```bash
 # Inbox-check (без launchd)
-bash /home/misha/Github/FMT-exocortex-template/roles/extractor/scripts/extractor.sh inbox-check
+bash /Users/user/Github/FMT-exocortex-template/roles/extractor/scripts/extractor.sh inbox-check
 
 # Knowledge Audit
-bash /home/misha/Github/FMT-exocortex-template/roles/extractor/scripts/extractor.sh audit
+bash /Users/user/Github/FMT-exocortex-template/roles/extractor/scripts/extractor.sh audit
 ```
 
 ## Как работает

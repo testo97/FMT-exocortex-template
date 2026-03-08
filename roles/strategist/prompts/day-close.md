@@ -3,24 +3,24 @@
 > **Триггер:** Ручной — по запросу пользователя (`./scripts/strategist.sh day-close`).
 > Отдельный файл отчёта НЕ создаётся. Итоги дня войдут в DayPlan следующего утра.
 
-Источник сценария: /home/misha/Github/CLAUDE.md → Протокол Day-Close
+Источник сценария: /Users/user/Github/CLAUDE.md → Протокол Day-Close
 
 ## Контекст
 
-- **WeekPlan:** /home/misha/Github/DS-strategy/current/WeekPlan W*.md (последний по дате)
-- **MEMORY:** ~/.claude/projects/-home-misha-Github/memory/MEMORY.md
-- **Exocortex backup:** /home/misha/Github/DS-strategy/exocortex/
+- **WeekPlan:** /Users/user/Github/DS-strategy/current/WeekPlan W*.md (последний по дате)
+- **MEMORY:** ~/.claude/projects/-Users-user-Github/memory/MEMORY.md
+- **Exocortex backup:** /Users/user/Github/DS-strategy/exocortex/
 
 ## Алгоритм
 
 ### 1. Сбор коммитов за сегодня
 
 ```bash
-# Для КАЖДОГО репо в /home/misha/Github/:
-git -C /home/misha/Github/<repo> log --since="today 00:00" --oneline --no-merges
+# Для КАЖДОГО репо в /Users/user/Github/:
+git -C /Users/user/Github/<repo> log --since="today 00:00" --oneline --no-merges
 ```
 
-- Пройди по ВСЕМ репозиториям в `/home/misha/Github/`
+- Пройди по ВСЕМ репозиториям в `/Users/user/Github/`
 - Сгруппируй коммиты по репозиториям
 - Сопоставь с РП из недельного плана
 - Определи статус каждого затронутого РП: done / partial / not started
@@ -44,15 +44,15 @@ git -C /home/misha/Github/<repo> log --since="today 00:00" --oneline --no-merges
 
 ### 4. Backup экзокортекса
 
-Скопируй актуальные файлы в `/home/misha/Github/DS-strategy/exocortex/`:
+Скопируй актуальные файлы в `/Users/user/Github/DS-strategy/exocortex/`:
 
 ```bash
 # Корневой CLAUDE.md
-cp /home/misha/Github/CLAUDE.md /home/misha/Github/DS-strategy/exocortex/CLAUDE.md
+cp /Users/user/Github/CLAUDE.md /Users/user/Github/DS-strategy/exocortex/CLAUDE.md
 
 # Memory (Слой 3)
-cp ~/.claude/projects/-home-misha-Github/memory/MEMORY.md /home/misha/Github/DS-strategy/exocortex/MEMORY.md
-cp ~/.claude/projects/-home-misha-Github/memory/*.md /home/misha/Github/DS-strategy/exocortex/
+cp ~/.claude/projects/-Users-user-Github/memory/MEMORY.md /Users/user/Github/DS-strategy/exocortex/MEMORY.md
+cp ~/.claude/projects/-Users-user-Github/memory/*.md /Users/user/Github/DS-strategy/exocortex/
 ```
 
 ### 5. Закоммитить

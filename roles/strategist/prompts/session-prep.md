@@ -4,12 +4,12 @@
 
 ## Контекст
 
-- **HUB (личные планы):** /home/misha/Github/DS-strategy/current/
-- **Документы стратегии:** /home/misha/Github/DS-strategy/docs/ (ВСЕ файлы: Strategy.md, Dissatisfactions.md, Session Agenda.md)
-- **Inbox:** /home/misha/Github/DS-strategy/inbox/ ([fleeting-notes.md](https://github.com/testo97/DS-strategy/blob/main/inbox/fleeting-notes.md) + свежие файлы за неделю)
-- **SPOKE (планы репо):** /home/misha/Github/*/WORKPLAN.md
-- **Стратегические карты:** /home/misha/Github/*/MAPSTRATEGIC.md (если есть в репо)
-- **MEMORY:** ~/.claude/projects/-home-misha-Github/memory/MEMORY.md
+- **HUB (личные планы):** /Users/user/Github/DS-strategy/current/
+- **Документы стратегии:** /Users/user/Github/DS-strategy/docs/ (ВСЕ файлы: Strategy.md, Dissatisfactions.md, Session Agenda.md)
+- **Inbox:** /Users/user/Github/DS-strategy/inbox/ ([fleeting-notes.md](https://github.com/testo97/DS-strategy/blob/main/inbox/fleeting-notes.md) + свежие файлы за неделю)
+- **SPOKE (планы репо):** /Users/user/Github/*/WORKPLAN.md
+- **Стратегические карты:** /Users/user/Github/*/MAPSTRATEGIC.md (если есть в репо)
+- **MEMORY:** ~/.claude/projects/-Users-user-Github/memory/MEMORY.md
 
 ## Именование файлов в current/
 
@@ -76,7 +76,7 @@ DS-strategy/
 #### 4. Сверка со стратегией + агрегация MAPSTRATEGIC (→ блок «Стратегическая сверка»)
 
 - Прочитай `DS-strategy/docs/Strategy.md` — фокусы года, Q1 цели, приоритеты месяца
-- Прочитай `/home/misha/Github/*/MAPSTRATEGIC.md` (если файл есть в репо)
+- Прочитай `/Users/user/Github/*/MAPSTRATEGIC.md` (если файл есть в репо)
 - **MCP-контекст:** `knowledge-mcp search("текущий фокус обучения", source_type="guides")` → рекомендации по руководствам для плана недели
 - **Агрегируй** фазы из MAPSTRATEGIC.md → обнови секцию «Текущие фазы (MAPSTRATEGIC)» в Strategy.md
 - Обнови «Приоритеты месяца» — статусы на основе WeekReport
@@ -85,7 +85,7 @@ DS-strategy/
 
 #### 5. Обход WORKPLAN.md (Hub-and-Spoke)
 
-- Прочитай `/home/misha/Github/*/WORKPLAN.md` из каждого репо
+- Прочитай `/Users/user/Github/*/WORKPLAN.md` из каждого репо
 - Собери все РП со статусом pending/in-progress
 - Выяви расхождения с HUB-планом
 
