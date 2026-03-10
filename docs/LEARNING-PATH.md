@@ -280,18 +280,31 @@ FMT-exocortex-template/
 
 ### 2.5. Обновления: update.sh
 
-```
-FMT-exocortex-template (upstream) ──→ update.sh ──→ Твой fork (merge)
-                                         │
-                                         ├──→ CLAUDE.md      → ~/Github/CLAUDE.md
-                                         ├──→ memory/*.md    → ~/.claude/projects/.../
-                                         │    (MEMORY.md НЕ трогается!)
-                                         └──→ roles/prompts → остаются в fork
+**Одна команда:** `cd ~/Github/FMT-exocortex && bash update.sh`
 
-DS-strategy/     ← НЕ затрагивается
-PACK-{область}/  ← НЕ затрагивается
-MEMORY.md        ← НЕ затрагивается
+Скрипт выполняет 5 шагов автоматически:
+
+| Шаг | Что делает | Результат |
+|-----|-----------|-----------|
+| 1. Fetch + merge | `git fetch upstream` + `git merge upstream/main` | Файлы форка обновлены |
+| 2. CLAUDE.md | Копирует `CLAUDE.md` → `~/Github/CLAUDE.md` | Живой CLAUDE.md обновлён |
+| 3. memory/*.md | Копирует все memory/ **кроме MEMORY.md** → `~/.claude/projects/.../memory/` | Протоколы обновлены, личные данные сохранены |
+| 4. MCP-конфиг | Мержит `settings.local.json`: серверы из upstream + пользовательские permissions | MCP-серверы актуальны |
+| 5. Роли | Переустанавливает роли (Стратег и др.), если их файлы изменились | Агенты обновлены |
+
+После всех шагов скрипт пушит merge-коммит в твой fork.
+
+**Что НЕ затрагивается:**
+
 ```
+DS-strategy/     ← Твои планы, inbox/, docs/
+PACK-{область}/  ← Твои доменные знания
+MEMORY.md        ← Твоя таблица РП
+```
+
+**Дополнительные режимы:**
+- `bash update.sh --check` — только показать, есть ли обновления (без применения)
+- `bash update.sh --dry-run` — показать, какие файлы изменятся (без применения)
 
 ### 2.6. Опциональные сервисы
 
