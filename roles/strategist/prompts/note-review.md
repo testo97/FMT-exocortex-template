@@ -4,11 +4,11 @@
 
 ## Контекст
 
-- **Заметки:** /Users/user/Github/DS-strategy/inbox/[fleeting-notes.md](https://github.com/testo97/DS-strategy/blob/main/inbox/fleeting-notes.md)
-- **НЭП:** /Users/user/Github/DS-strategy/docs/Dissatisfactions.md
-- **Стратегия:** /Users/user/Github/DS-strategy/docs/Strategy.md
-- **План недели:** /Users/user/Github/DS-strategy/current/WeekPlan W*.md
-- **Inbox Экстрактора:** /Users/user/Github/DS-strategy/inbox/captures.md
+- **Заметки:** /Users/user/Github/DS-my-strategy/inbox/[fleeting-notes.md](https://github.com/testo97/DS-my-strategy/blob/main/inbox/fleeting-notes.md)
+- **НЭП:** /Users/user/Github/DS-my-strategy/docs/Dissatisfactions.md
+- **Стратегия:** /Users/user/Github/DS-my-strategy/docs/Strategy.md
+- **План недели:** /Users/user/Github/DS-my-strategy/current/WeekPlan W*.md
+- **Inbox Экстрактора:** /Users/user/Github/DS-my-strategy/inbox/captures.md
 - **MEMORY:** ~/.claude/projects/-Users-user-Github/memory/MEMORY.md
 
 ## Предусловие
@@ -37,18 +37,18 @@
 
 #### 1. Прочитать заметки
 
-- Открой `DS-strategy/inbox/fleeting-notes.md`
+- Открой `DS-my-strategy/inbox/fleeting-notes.md`
 - Выдели все **жирные** заметки (`**текст**`) — это новые
 - Заметки с `🔄` — тоже просмотри, но не обрабатывай повторно (если нет нового контекста)
 - Если новых заметок нет → сообщить «Новых заметок нет» и завершить
 
 #### 2. Прочитать контекст
 
-- `DS-strategy/docs/Dissatisfactions.md` — текущие НЭП (S* стратегические, O* операционные)
-- `DS-strategy/current/WeekPlan W*.md` — РП и приоритеты недели
-- `DS-strategy/docs/Strategy.md` — фокусы года, приоритеты месяца
+- `DS-my-strategy/docs/Dissatisfactions.md` — текущие НЭП (S* стратегические, O* операционные)
+- `DS-my-strategy/current/WeekPlan W*.md` — РП и приоритеты недели
+- `DS-my-strategy/docs/Strategy.md` — фокусы года, приоритеты месяца
 - MEMORY.md — статусы РП
-- `DS-strategy/inbox/unsatisfied-questions.md` — **структурированный отчёт** из feedback_triage DB (авто-классификация ботом). Замечания (✏️) и urgent (high/critical) — в начале файла. Real-time алерты уже отправлены ботом → Note-Review только проверяет кластеры (≥3 в одном кластере → пометить)
+- `DS-my-strategy/inbox/unsatisfied-questions.md` — **структурированный отчёт** из feedback_triage DB (авто-классификация ботом). Замечания (✏️) и urgent (high/critical) — в начале файла. Real-time алерты уже отправлены ботом → Note-Review только проверяет кластеры (≥3 в одном кластере → пометить)
 
 #### 3. Классифицировать каждую заметку
 
@@ -56,10 +56,10 @@
 |---|-----------|----------|------------------------|
 | 1 | **НЭП** | Неудовлетворённость, дискомфорт, «хочу изменить», эмоция | → предложение в конец Dissatisfactions.md |
 | 2 | **Задача** | Конкретное действие, «завтра сделать», «нужно проверить» | → предложение в конец WeekPlan |
-| 3 | **Знание** | Паттерн, различение, метод, правило, инсайт | → запись в DS-strategy/inbox/captures.md |
+| 3 | **Знание** | Паттерн, различение, метод, правило, инсайт | → запись в DS-my-strategy/inbox/captures.md |
 | 4 | **Черновик** | Зерно для поста/статьи, развёрнутая мысль, рефлексия с концептами | → рекомендация в inbox-triage (секция 📝). Файл НЕ создаётся — только после согласования |
 | 5 | **Идея** 🔄 | Размышление, требует осмысления, нет конкретного действия | → пометить 🔄 в fleeting-notes.md |
-| 6 | **Личные данные** | Контакт, телефон, email, токен, аккаунт, реквизиты, справочные данные | → DS-strategy/personal/*.md |
+| 6 | **Личные данные** | Контакт, телефон, email, токен, аккаунт, реквизиты, справочные данные | → DS-my-strategy/personal/*.md |
 | 7 | **Шум** | Тест, дубль, случайное нажатие, ссылка без контекста, уже сделано / решено | → зачеркнуть ~~текст~~ |
 
 **Правила классификации:**
@@ -120,18 +120,18 @@
 
 | Категория | Целевой документ |
 |-----------|------------------|
-| НЭП | `DS-strategy/docs/Dissatisfactions.md` |
-| Задача (на завтра / с дедлайном) | `DS-strategy/current/DayPlan*.md` (ближайший) или `WeekPlan W*.md` |
-| Задача (на неделю) | `DS-strategy/current/WeekPlan W*.md` |
-| Задача (стратегическая) | `DS-strategy/docs/Strategy.md` |
-| Личные данные | `DS-strategy/personal/` (contacts / accounts / secrets / reference) |
+| НЭП | `DS-my-strategy/docs/Dissatisfactions.md` |
+| Задача (на завтра / с дедлайном) | `DS-my-strategy/current/DayPlan*.md` (ближайший) или `WeekPlan W*.md` |
+| Задача (на неделю) | `DS-my-strategy/current/WeekPlan W*.md` |
+| Задача (стратегическая) | `DS-my-strategy/docs/Strategy.md` |
+| Личные данные | `DS-my-strategy/personal/` (contacts / accounts / secrets / reference) |
 
 > Стратег (Day-Plan, 4:00) читает эти документы и ВИДИТ предложения.
 > Пользователь может заглянуть в конец документа — увидит «на основании чего».
 
 #### 6. Записать знание в inbox Экстрактора
 
-Для заметок с категорией «Знание» — добавь запись в `DS-strategy/inbox/captures.md`:
+Для заметок с категорией «Знание» — добавь запись в `DS-my-strategy/inbox/captures.md`:
 
 ```markdown
 ### [краткое описание знания]
@@ -158,7 +158,7 @@
 - "краткий текст заметки" → рекомендую черновик: [предлагаемое название]. Концепты: [список]. Target: заготовка | pack | рп
 ```
 
-> **Черновик ≠ Заготовка.** Черновик — личный, в DS-strategy. Заготовка — публичная, в Индексе знаний (status: draft).
+> **Черновик ≠ Заготовка.** Черновик — личный, в DS-my-strategy. Заготовка — публичная, в Индексе знаний (status: draft).
 > **Guards:** ≤5 черновиков = норма. 6-10 = ⚠️ предупреждение в рекомендации. >10 = 🛑 не рекомендовать новые.
 
 #### 7. Записать личные данные в personal/
@@ -167,10 +167,10 @@
 
 | Тип данных | Файл |
 |------------|------|
-| Телефон, email, контакт человека | `DS-strategy/personal/contacts.md` |
-| Аккаунт, логин, URL сервиса | `DS-strategy/personal/accounts.md` |
-| Токен, API-ключ, пароль | `DS-strategy/personal/secrets.md` |
-| Адрес, реквизиты, прочее | `DS-strategy/personal/reference.md` |
+| Телефон, email, контакт человека | `DS-my-strategy/personal/contacts.md` |
+| Аккаунт, логин, URL сервиса | `DS-my-strategy/personal/accounts.md` |
+| Токен, API-ключ, пароль | `DS-my-strategy/personal/secrets.md` |
+| Адрес, реквизиты, прочее | `DS-my-strategy/personal/reference.md` |
 
 > **secrets.md** — в .gitignore, не коммитится. Полные номера карт и PIN НЕ записывать.
 
@@ -203,7 +203,7 @@
 > **После одобрения отчёта (шаг 9).**
 > Этот файл — входной артефакт для Day-Plan (утро). Day-Plan включает его в план дня.
 
-Создай (или перезапиши) файл `DS-strategy/inbox/inbox-triage.md`:
+Создай (или перезапиши) файл `DS-my-strategy/inbox/inbox-triage.md`:
 
 ```markdown
 ---
@@ -280,8 +280,8 @@ status: pending
 
 #### 11. Закоммитить
 
-- Закоммить изменения в DS-strategy (fleeting-notes.md + документы с предложениями + personal/ + inbox cleanup + archive)
-- Если были записи для Экстрактора → закоммить DS-strategy/inbox/captures.md
+- Закоммить изменения в DS-my-strategy (fleeting-notes.md + документы с предложениями + personal/ + inbox cleanup + archive)
+- Если были записи для Экстрактора → закоммить DS-my-strategy/inbox/captures.md
 - **secrets.md** НЕ коммитится (.gitignore) — но изменения в нём сохраняются локально
 - Запушить
 
@@ -328,5 +328,5 @@ status: pending
 | **Day-Close** | Sync статусов, не зависит от Note-Review |
 | **Session-Prep** (Пн) | Читает ВСЕ документы, включая предложения. Может агрегировать неразобранные |
 | **Strategy-Session** | Разбирает 🔄-заметки, ревьюит draft-list.md (TTL-проверка), приоритизирует черновики |
-| **Экстрактор** | Читает DS-strategy/inbox/captures.md → формализует → Pack (после одобрения пользователя) |
+| **Экстрактор** | Читает DS-my-strategy/inbox/captures.md → формализует → Pack (после одобрения пользователя) |
 | **Draft-list** | Note-Review рекомендует черновики → inbox-triage. Strategy-Session ревьюит draft-list.md (TTL и приоритеты) |

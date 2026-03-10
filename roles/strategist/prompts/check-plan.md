@@ -4,7 +4,7 @@
 
 ## Контекст
 
-- Планы: ~/Github/DS-strategy/current/
+- Планы: ~/Github/DS-my-strategy/current/
 
 ## Алгоритм
 

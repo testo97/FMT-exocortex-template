@@ -7,7 +7,7 @@
 
 ## Контекст
 
-- **WeekPlan:** /Users/user/Github/DS-strategy/current/WeekPlan W*.md
+- **WeekPlan:** /Users/user/Github/DS-my-strategy/current/WeekPlan W*.md
 - **Шаблон:** см. секцию «Шаблон WeekReport» ниже
 
 ### 0. WakaTime — время работы за неделю
@@ -28,7 +28,7 @@ git -C /Users/user/Github/<repo> log --since="last monday 00:00" --until="today 
 ```
 
 - Пройди по ВСЕМ репозиториям в `/Users/user/Github/`
-- Загрузи текущий WeekPlan из `DS-strategy/current/`
+- Загрузи текущий WeekPlan из `DS-my-strategy/current/`
 - Сопоставь коммиты с РП из WeekPlan
 - Определи статус каждого РП: done / partial / not started
 
@@ -56,7 +56,7 @@ git -C /Users/user/Github/<repo> log --since="last monday 00:00" --until="today 
 ### 5. Сохранение
 
 1. Создай `current/WeekReport W{N} YYYY-MM-DD.md`
-2. Закоммить в DS-strategy
+2. Закоммить в DS-my-strategy
 
 ### 6. Создать пост для клуба (опционально)
 

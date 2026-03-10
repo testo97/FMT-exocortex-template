@@ -39,7 +39,7 @@ Level 3: DS (третьи принципы)        ← производные о
 | Файл | Где | Кто пишет |
 |------|-----|-----------|
 | `MAPSTRATEGIC.md` | В репо системы | Владелец системы — «куда двигается ЭТА система» |
-| `Strategy.md` | `DS-strategy/docs/` | Стратег — общая стратегия, агрегат из MAPSTRATEGIC |
+| `Strategy.md` | `DS-my-strategy/docs/` | Стратег — общая стратегия, агрегат из MAPSTRATEGIC |
 
 > Детали типов репо, именование, измерения: → `memory/repo-type-rules.md`
 
@@ -59,8 +59,8 @@ Level 3: DS (третьи принципы)        ← производные о
 
 1. **WP Gate:** При ЛЮБОМ задании → протокол Открытия → выполнить ДО начала работы.
 2. **Push:** По команде «заливай» / «запуши» → commit + push без доп. вопросов. Push ДО отчёта Закрытия.
-3. **Pull-before-Commit (DS-strategy):** `git pull --rebase` → модификация → `commit` → `push`. Нарушение = конфликты.
-4. **Без Obsidian (DS-strategy):** Просмотр через VS Code, НЕ Obsidian.
+3. **Pull-before-Commit (DS-my-strategy):** `git pull --rebase` → модификация → `commit` → `push`. Нарушение = конфликты.
+4. **Без Obsidian (DS-my-strategy):** Просмотр через VS Code, НЕ Obsidian.
 5. **Close:** При триггере Закрытия → протокол Закрытия → выполнить.
 
 ### Протокол Работы (summary, полный → `memory/protocol-work.md`)
@@ -120,7 +120,7 @@ Level 3: DS (третьи принципы)        ← производные о
 | Архитектурное решение / SOTA | `memory/sota-reference.md` |
 
 Политика: ≤10 файлов, ≤100 строк каждый. Кросс-системное → memory/. Системное → repo/CLAUDE.md.
-Backup на Close: `memory/ + CLAUDE.md → DS-strategy/exocortex/`
+Backup на Close: `memory/ + CLAUDE.md → DS-my-strategy/exocortex/`
 
 ---
 

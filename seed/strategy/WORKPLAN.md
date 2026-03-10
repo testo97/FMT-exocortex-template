@@ -1,4 +1,4 @@
-# WORKPLAN: DS-strategy
+# WORKPLAN: DS-my-strategy
 
 > Рабочие продукты для этого репозитория (governance hub).
 

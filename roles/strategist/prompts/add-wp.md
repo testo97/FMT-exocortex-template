@@ -4,7 +4,7 @@
 
 ## Контекст
 
-- Планы: ~/Github/DS-strategy/current/
+- Планы: ~/Github/DS-my-strategy/current/
 
 ## Алгоритм
 
@@ -20,7 +20,7 @@
    - Предупреди если превышение
 
 3. **Добавление:**
-   - Найди последний WeekPlan в DS-strategy/current/
+   - Найди последний WeekPlan в DS-my-strategy/current/
    - Добавь РП в таблицу
    - Обнови бюджет
    - Обнови MEMORY.md

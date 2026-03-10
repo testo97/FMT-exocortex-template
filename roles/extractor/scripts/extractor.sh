@@ -94,7 +94,7 @@ $extra_args"
     log "Completed process: $command_file"
 
     # Commit + push changes (отчёты, помеченные captures)
-    local strategy_dir="$WORKSPACE/DS-strategy"
+    local strategy_dir="$WORKSPACE/DS-my-strategy"
 
     if [ -d "$strategy_dir/.git" ]; then
         # Очистить staging area
@@ -104,14 +104,14 @@ $extra_args"
         git -C "$strategy_dir" add inbox/captures.md inbox/extraction-reports/ >> "$LOG_FILE" 2>&1 || true
         if ! git -C "$strategy_dir" diff --cached --quiet 2>/dev/null; then
             git -C "$strategy_dir" commit -m "inbox-check: extraction report $DATE" >> "$LOG_FILE" 2>&1 \
-                && log "Committed DS-strategy" \
+                && log "Committed DS-my-strategy" \
                 || log "WARN: git commit failed"
         else
-            log "No new changes to commit in DS-strategy"
+            log "No new changes to commit in DS-my-strategy"
         fi
 
         if ! git -C "$strategy_dir" diff --quiet origin/main..HEAD 2>/dev/null; then
-            git -C "$strategy_dir" push >> "$LOG_FILE" 2>&1 && log "Pushed DS-strategy" || log "WARN: git push failed"
+            git -C "$strategy_dir" push >> "$LOG_FILE" 2>&1 && log "Pushed DS-my-strategy" || log "WARN: git push failed"
         fi
     fi
 
@@ -138,7 +138,7 @@ case "$1" in
         fi
 
         # Быстрая проверка: есть ли captures в inbox
-        CAPTURES_FILE="$WORKSPACE/DS-strategy/inbox/captures.md"
+        CAPTURES_FILE="$WORKSPACE/DS-my-strategy/inbox/captures.md"
         if [ -f "$CAPTURES_FILE" ]; then
             PENDING=$(grep -c '^### ' "$CAPTURES_FILE" 2>/dev/null) || PENDING=0
             PROCESSED=$(grep -c '\[processed' "$CAPTURES_FILE" 2>/dev/null) || PROCESSED=0

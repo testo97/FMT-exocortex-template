@@ -1,4 +1,4 @@
-# DS-strategy — Инструкции для Claude Code
+# DS-my-strategy — Инструкции для Claude Code
 
 > **Тип репозитория:** `DS/governance` (personal)
 

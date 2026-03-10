@@ -29,7 +29,7 @@
 | — Наладчик (Grade 2) | `DS-IT-systems/DS-ai-systems/fixer/` |
 | — Статистик (Grade 1) | `DS-IT-systems/DS-ai-systems/pulse/` |
 | — Оценщик (Grade 2) | `DS-IT-systems/DS-ai-systems/evaluator/` |
-| Личная онтология | `DS-strategy/ontology.md` |
+| Личная онтология | `DS-my-strategy/ontology.md` |
 | Программа обучения | `DS-principles-curriculum/` |
 
 ## Pack-репо
@@ -59,10 +59,10 @@
 
 | Файл | Путь |
 |------|------|
-| Стратегия | `DS-strategy/docs/Strategy.md` |
-| WeekPlan | `DS-strategy/current/` |
+| Стратегия | `DS-my-strategy/docs/Strategy.md` |
+| WeekPlan | `DS-my-strategy/current/` |
 
 ## WP Context Files
 
-> Все context files: `DS-strategy/inbox/WP-{N}-{slug}.md`
-> Архив: `DS-strategy/archive/wp-contexts/`
+> Все context files: `DS-my-strategy/inbox/WP-{N}-{slug}.md`
+> Архив: `DS-my-strategy/archive/wp-contexts/`

@@ -89,7 +89,7 @@
 
 > **ПРАВИЛО:** Перед выполнением Close — ПЕРЕЧИТАЙ CLAUDE.md § 2 чеклист Close. Не выполняй по памяти.
 
-- [ ] WP Context File создан/обновлён в `DS-strategy/inbox/WP-{N}-{slug}.md`
+- [ ] WP Context File создан/обновлён в `DS-my-strategy/inbox/WP-{N}-{slug}.md`
   - Текущее состояние, решения, следующие шаги
   - **Создавать при ПЕРВОМ Close**, не откладывать
 - [ ] Если создано новое репо → MAPSTRATEGIC.md (roadmap фаз)
@@ -102,7 +102,7 @@
 
 - [ ] `template-sync.sh` — обновить список `mem_file` (passthrough или strip-author)
 - [ ] `validate-template.sh` — обновить список required files (если файл обязательный)
-- [ ] `DS-strategy/exocortex/` — удалить stale, добавить новые (backup)
+- [ ] `DS-my-strategy/exocortex/` — удалить stale, добавить новые (backup)
 - [ ] `protocol-open.md` — обновить таблицу «Обслуживание экзокортекса» (если структура изменилась)
 - [ ] Запустить `template-sync.sh` и убедиться, что валидация проходит
 

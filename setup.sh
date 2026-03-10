@@ -1,6 +1,6 @@
 #!/bin/bash
 # Exocortex Setup Script
-# Configures a forked FMT-exocortex-template: placeholders, memory, launchd, DS-strategy
+# Configures a forked FMT-exocortex-template: placeholders, memory, launchd, DS-my-strategy
 #
 # Usage:
 #   bash setup.sh          # Полная установка (git + GitHub CLI + Claude Code + автоматизация)
@@ -179,7 +179,7 @@ if $DRY_RUN; then
         echo "  4. Copy .claude/settings.local.json → $WORKSPACE_DIR/.claude/"
         echo "  5. Install Strategist launchd agent (Extractor + Synchronizer = optional)"
     fi
-    echo "  6. Create DS-strategy repo ($(if $CORE_ONLY; then echo "local only"; else echo "+ GitHub"; fi))"
+    echo "  6. Create DS-my-strategy repo ($(if $CORE_ONLY; then echo "local only"; else echo "+ GitHub"; fi))"
     exit 0
 fi
 
@@ -306,13 +306,13 @@ else
     fi
 fi
 
-# === 6. Create DS-strategy repo ===
-echo "[6/6] Setting up DS-strategy..."
-MY_STRATEGY_DIR="$WORKSPACE_DIR/DS-strategy"
+# === 6. Create DS-my-strategy repo ===
+echo "[6/6] Setting up DS-my-strategy..."
+MY_STRATEGY_DIR="$WORKSPACE_DIR/DS-my-strategy"
 STRATEGY_TEMPLATE="$TEMPLATE_DIR/seed/strategy"
 
 if [ -d "$MY_STRATEGY_DIR/.git" ]; then
-    echo "  DS-strategy already exists as git repo."
+    echo "  DS-my-strategy already exists as git repo."
 else
     if [ -d "$STRATEGY_TEMPLATE" ]; then
         # Copy my-strategy template into its own repo
@@ -320,29 +320,29 @@ else
         cd "$MY_STRATEGY_DIR"
         git init
         git add -A
-        git commit -m "Initial exocortex: DS-strategy governance hub"
+        git commit -m "Initial exocortex: DS-my-strategy governance hub"
 
         if ! $CORE_ONLY; then
             # Create GitHub repo (full mode only)
-            gh repo create "$GITHUB_USER/DS-strategy" --private --source=. --push 2>/dev/null || \
-                echo "  GitHub repo DS-strategy already exists or creation skipped."
+            gh repo create "$GITHUB_USER/DS-my-strategy" --private --source=. --push 2>/dev/null || \
+                echo "  GitHub repo DS-my-strategy already exists or creation skipped."
         else
             echo "  Локальный репозиторий создан. Для публикации на GitHub:"
-            echo "    cd $MY_STRATEGY_DIR && gh repo create $GITHUB_USER/DS-strategy --private --source=. --push"
+            echo "    cd $MY_STRATEGY_DIR && gh repo create $GITHUB_USER/DS-my-strategy --private --source=. --push"
         fi
     else
-        echo "  ERROR: seed/strategy/ not found. DS-strategy will be incomplete."
+        echo "  ERROR: seed/strategy/ not found. DS-my-strategy will be incomplete."
         echo "  Fix: re-clone the template and run setup.sh again."
         echo "  Creating minimal structure as fallback..."
         mkdir -p "$MY_STRATEGY_DIR"/{current,inbox,archive/wp-contexts,docs,exocortex}
         cd "$MY_STRATEGY_DIR"
         git init
         git add -A
-        git commit -m "Initial exocortex: DS-strategy governance hub (minimal)"
+        git commit -m "Initial exocortex: DS-my-strategy governance hub (minimal)"
 
         if ! $CORE_ONLY; then
-            gh repo create "$GITHUB_USER/DS-strategy" --private --source=. --push 2>/dev/null || \
-                echo "  GitHub repo DS-strategy already exists or creation skipped."
+            gh repo create "$GITHUB_USER/DS-my-strategy" --private --source=. --push 2>/dev/null || \
+                echo "  GitHub repo DS-my-strategy already exists or creation skipped."
         fi
     fi
 fi
@@ -360,7 +360,7 @@ echo ""
 echo "Verify installation:"
 echo "  ✓ CLAUDE.md:   $WORKSPACE_DIR/CLAUDE.md"
 echo "  ✓ Memory:      $CLAUDE_MEMORY_DIR/ ($(ls "$CLAUDE_MEMORY_DIR"/*.md 2>/dev/null | wc -l | tr -d ' ') files)"
-echo "  ✓ DS-strategy: $MY_STRATEGY_DIR/"
+echo "  ✓ DS-my-strategy: $MY_STRATEGY_DIR/"
 echo "  ✓ Template:    $TEMPLATE_DIR/"
 echo ""
 

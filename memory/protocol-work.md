@@ -26,7 +26,7 @@
 | Доменное (архитектура, паттерны) | Соответствующий Pack | Close | Да (KE) |
 | Различение, метод, FM, WP | Соответствующий Pack | Close | Да (KE) |
 | Крупный урок | `memory/<topic>.md` | Close | Нет |
-| Зерно для поста | `DS-strategy/drafts/draft-list.md` + `drafts/` | Close | Нет |
+| Зерно для поста | `DS-my-strategy/drafts/draft-list.md` + `drafts/` | Close | Нет |
 
 **Формат:** *«Capture: [что] → [куда]»*
 
@@ -36,14 +36,14 @@
 Заметка (7д) → Черновик (7д) → Заготовка (14д) → Пост
 ```
 
-> **Черновик ≠ Заготовка.** Черновик — личный (DS-strategy). Заготовка — публичная (Индекс знаний, status: draft).
+> **Черновик ≠ Заготовка.** Черновик — личный (DS-my-strategy). Заготовка — публичная (Индекс знаний, status: draft).
 > **Заготовка ≠ Пост.** Заготовка опубликована, но не продвигается. Пост — активно продвигается.
 > **Pack → пост:** KE добавил ≥3 сущностей по теме → предложить черновик для поста.
 > **Guards:** ≤5 черновиков = норма. 6-10 = ⚠️ предупреждение. >10 = 🛑 блокировка (не добавлять новые).
 
 **MCP-верификация:** Перед записью в Pack → `knowledge-mcp search(тема)` + `knowledge-mcp get_document(файл)` → нет дубликата, нет противоречия.
 
-**Отложенные captures:** Если capture нельзя применить сразу (нужен Close), записать в `DS-strategy/inbox/captures.md` с тегом сессии.
+**Отложенные captures:** Если capture нельзя применить сразу (нужен Close), записать в `DS-my-strategy/inbox/captures.md` с тегом сессии.
 
 ---
 
@@ -62,8 +62,8 @@
 
 ## Правила работы
 
-1. **Pull-before-Commit (DS-strategy):** `git pull --rebase` → модификация → `commit` → `push`
-2. **Без Obsidian (DS-strategy):** Просмотр через VS Code, НЕ Obsidian
+1. **Pull-before-Commit (DS-my-strategy):** `git pull --rebase` → модификация → `commit` → `push`
+2. **Без Obsidian (DS-my-strategy):** Просмотр через VS Code, НЕ Obsidian
 3. **Source-of-truth:** Pack — единственный source-of-truth. Downstream потребляет, не создаёт
 4. **Fallback chain:** Downstream → Pack → SPF → FPF → ZP. Непонятно → поднимись выше
 5. **Эскалация:** Задача перерастает ≤15 мин? → «Это перерастает в РП. Записать?»
@@ -77,4 +77,4 @@
 1. ✅ Capture-to-Pack — есть ли знание для записи?
 2. ✅ Source-of-truth — не нарушается ли?
 3. ✅ Статус РП — обновить если изменился
-4. ✅ Context file — актуален ли `DS-strategy/inbox/WP-{N}*.md`?
+4. ✅ Context file — актуален ли `DS-my-strategy/inbox/WP-{N}*.md`?

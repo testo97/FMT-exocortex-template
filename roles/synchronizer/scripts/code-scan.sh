@@ -34,7 +34,7 @@ discover_repos() {
 
     # Governance-репо — исключаем из сканирования
     local exclude=(
-        "DS-strategy"
+        "DS-my-strategy"
     )
 
     for dir in "$WORKSPACE"/DS-*/; do

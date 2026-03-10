@@ -16,7 +16,7 @@
 | **memory/** | Оперативная память: текущие задачи, различения, чеклисты, SOTA-практики. Claude читает их в начале каждой сессии |
 | **MCP-серверы** | Доступ к базе знаний платформы: ~5400 документов, образовательные руководства, цифровой двойник. Claude ищет ответы в базе, а не угадывает |
 | **Стратег** | Роль (R1), запускается автоматически: утренний план дня, вечернее ревью, недельная сессия стратегирования |
-| **DS-strategy/** | Твой стратегический хаб: планы недель, отчёты, неудовлетворённости, входящие заметки |
+| **DS-my-strategy/** | Твой стратегический хаб: планы недель, отчёты, неудовлетворённости, входящие заметки |
 
 **Как это выглядит на практике:**
 
@@ -86,7 +86,7 @@
 mkdir -p ~/Github
 ```
 
-> **Важно:** Эта папка — ваше рабочее пространство. В неё будут клонироваться все репозитории: `FMT-exocortex-template/`, `DS-strategy/`, `PACK-{область}/`, `DS-{проекты}/` и др. CLAUDE.md тоже будет лежать в корне этой папки. Название может быть любым (не обязательно `Github`), но все репо должны быть в одном месте — Claude Code ориентируется на эту структуру.
+> **Важно:** Эта папка — ваше рабочее пространство. В неё будут клонироваться все репозитории: `FMT-exocortex-template/`, `DS-my-strategy/`, `PACK-{область}/`, `DS-{проекты}/` и др. CLAUDE.md тоже будет лежать в корне этой папки. Название может быть любым (не обязательно `Github`), но все репо должны быть в одном месте — Claude Code ориентируется на эту структуру.
 
 ### Шаг 1: Клонировать и запустить установку
 
@@ -121,7 +121,7 @@ bash setup.sh --core
 3. Копирует `CLAUDE.md` → корень рабочей директории
 4. Копирует `memory/*.md` → `~/.claude/projects/.../memory/`
 5. Устанавливает launchd-агентов для Стратега
-6. Создаёт `DS-strategy/` — приватный репозиторий для стратегирования
+6. Создаёт `DS-my-strategy/` — приватный репозиторий для стратегирования
 
 Посмотреть без выполнения: `bash setup.sh --dry-run`
 </details>
@@ -136,8 +136,8 @@ ls ~/.claude/projects/*/memory/
 # Проверить launchd
 launchctl list | grep strategist
 
-# Проверить DS-strategy
-ls ~/Github/DS-strategy/
+# Проверить DS-my-strategy
+ls ~/Github/DS-my-strategy/
 ```
 
 ### Шаг 3: Первая сессия (~30 мин)
@@ -191,7 +191,7 @@ bash update.sh
 | `bash update.sh --dry-run` | Показать что изменится, не применять |
 
 **Что обновляется (standard):** CLAUDE.md, memory/*.md (кроме MEMORY.md), промпты Стратега.
-**Что НЕ трогается (personal):** MEMORY.md (твои РП), DS-strategy/ (твои планы).
+**Что НЕ трогается (personal):** MEMORY.md (твои РП), DS-my-strategy/ (твои планы).
 
 ---
 
@@ -208,14 +208,14 @@ FMT-exocortex-template/                    ~/Github/ (твоё рабочее п
 │                                           │
 ├── roles/strategist/   ── install.sh ──→  ├── ~/Library/LaunchAgents/ (расписание)
 │                                           │
-├── seed/strategy/       ── создаёт репо ─→ ├── DS-strategy/ (★ отдельный приватный репо)
+├── seed/strategy/       ── создаёт репо ─→ ├── DS-my-strategy/ (★ отдельный приватный репо)
 │                                           │
 └── (остаётся как fork)                     ├── FMT-exocortex-template/ (НЕ трогать)
                                             ├── PACK-{область}/ (когда создашь)
                                             └── DS-{проекты}/ (когда создашь)
 ```
 
-> **Ключевое:** `seed/strategy/` — заготовка. При setup она становится **отдельным приватным репозиторием** `DS-strategy/` на GitHub. После setup связь с seed/ разрывается — DS-strategy живёт своей жизнью.
+> **Ключевое:** `seed/strategy/` — заготовка. При setup она становится **отдельным приватным репозиторием** `DS-my-strategy/` на GitHub. После setup связь с seed/ разрывается — DS-my-strategy живёт своей жизнью.
 
 ### Что даёт платформа (Standard)
 
@@ -236,9 +236,9 @@ FMT-exocortex-template/                    ~/Github/ (твоё рабочее п
 
 | Данные | Где живут | Как растут |
 |--------|-----------|-----------|
-| **Планы** | `DS-strategy/current/` | Стратег создаёт WeekPlan и DayPlan |
-| **Контексты задач** | `DS-strategy/inbox/WP-*.md` | Claude фиксирует прогресс по задачам |
-| **Стратегия** | `DS-strategy/docs/Strategy.md` | Обновляется на стратегических сессиях |
+| **Планы** | `DS-my-strategy/current/` | Стратег создаёт WeekPlan и DayPlan |
+| **Контексты задач** | `DS-my-strategy/inbox/WP-*.md` | Claude фиксирует прогресс по задачам |
+| **Стратегия** | `DS-my-strategy/docs/Strategy.md` | Обновляется на стратегических сессиях |
 | **Задачи недели** | `MEMORY.md` | Claude обновляет таблицу РП каждую сессию |
 | **Знания** | `PACK-{область}/` | Экстрактор формализует captures в Pack-сущности |
 | **Проекты** | `DS-{проекты}/` | Ты создаёшь по мере роста |
@@ -255,7 +255,7 @@ FMT-exocortex-template ──── update.sh ──→ Твой fork (git merge
                                │    (MEMORY.md НЕ трогается!)
                                └──→ roles/prompts/ → остаются в fork
 
-DS-strategy/     ← НЕ затрагивается (отдельный репо)
+DS-my-strategy/     ← НЕ затрагивается (отдельный репо)
 PACK-{область}/  ← НЕ затрагивается (твой репо)
 MEMORY.md        ← НЕ затрагивается (твои данные)
 ```
@@ -329,7 +329,7 @@ T1: Старт  →  T2: Изучение  →  T3: Персонализация
 | Репо | Тип | Что это | Откуда |
 |------|-----|---------|--------|
 | **FMT-exocortex-template/** | Format | Твой форк шаблона экзокортекса (источник обновлений, CLAUDE.md, memory/, Стратег) | Fork от [FMT-exocortex-template](https://github.com/TserenTserenov/FMT-exocortex-template) |
-| **DS-strategy/** | Downstream/governance | Стратегический хаб: WeekPlan, DayPlan, inbox, стратегия, неудовлетворённости | Создаётся setup.sh из шаблона `seed/strategy/` |
+| **DS-my-strategy/** | Downstream/governance | Стратегический хаб: WeekPlan, DayPlan, inbox, стратегия, неудовлетворённости | Создаётся setup.sh из шаблона `seed/strategy/` |
 
 ### Создаёшь сам (когда готов)
 
@@ -356,7 +356,7 @@ T1: Старт  →  T2: Изучение  →  T3: Персонализация
 | **DS-ai-systems/extractor/** | Экстрактор знаний | Первый Pack создан, 10+ сущностей. Автоматическое извлечение знаний из сессий |
 | **DS-ai-systems/synchronizer/** | Синхронизатор | 3+ репозитория. Кросс-репо синхронизация, code-scan, автоматические проекции |
 
-> **Принцип:** Начни с минимума (2 репо: FMT-exocortex-template + DS-strategy). Добавляй по мере роста. Не клонируй всё сразу.
+> **Принцип:** Начни с минимума (2 репо: FMT-exocortex-template + DS-my-strategy). Добавляй по мере роста. Не клонируй всё сразу.
 
 ---
 
@@ -405,7 +405,7 @@ FMT-exocortex-template/
 │       └── config.yaml              # Расписание (reference)
 │
 ├── seed/                            # Шаблоны → отдельные репо после setup
-│   └── strategy/                    # → DS-strategy/ (стратегический хаб)
+│   └── strategy/                    # → DS-my-strategy/ (стратегический хаб)
 │       ├── current/                 # Текущие планы и отчёты
 │       ├── archive/                 # Архив
 │       ├── inbox/                   # Входящие заметки
@@ -424,10 +424,10 @@ FMT-exocortex-template/
 |------|-----|-----------|-------------|
 | **PLATFORM** | `memory/*.md` (кроме MEMORY.md), `roles/`, `docs/`, `.claude/` | Обновляет | Не трогает |
 | **PERSONAL** | `memory/MEMORY.md` | Не трогает | Редактирует каждую сессию |
-| **SEED** | `seed/strategy/` | N/A | После setup → отдельный репо DS-strategy/ |
+| **SEED** | `seed/strategy/` | N/A | После setup → отдельный репо DS-my-strategy/ |
 | **ROOT** | `CLAUDE.md`, `README.md`, `ONTOLOGY.md` | CLAUDE.md обновляет | Читает |
 
-> **Правило:** Platform-space обновляется из upstream (`update.sh`). User-space (MEMORY.md, DS-strategy/) — никогда.
+> **Правило:** Platform-space обновляется из upstream (`update.sh`). User-space (MEMORY.md, DS-my-strategy/) — никогда.
 
 ---
 
@@ -465,7 +465,7 @@ A: MCP (Model Context Protocol) — протокол, через который 
 A: Pack — это формализованная область знаний (паспорт предметной области). Например, PACK-product-management или PACK-machine-learning. Pack — единственный source-of-truth для доменного знания.
 
 **Q: Безопасны ли мои данные?**
-A: Три зоны защиты: (1) **Локальная** — CLAUDE.md и memory/ на вашем компьютере, защищены на уровне ОС; (2) **GitHub** — DS-strategy и Pack — приватные репозитории на вашем аккаунте; (3) **Платформа** — per-user OAuth, изоляция данных пользователей. Anthropic API [не использует данные для обучения](https://www.anthropic.com/policies/privacy-policy). Секреты (API-ключи, токены) хранятся в `~/.config/`, не в git. Подробнее: [LEARNING-PATH.md § 8.5](docs/LEARNING-PATH.md#85-безопасность-в-iwe).
+A: Три зоны защиты: (1) **Локальная** — CLAUDE.md и memory/ на вашем компьютере, защищены на уровне ОС; (2) **GitHub** — DS-my-strategy и Pack — приватные репозитории на вашем аккаунте; (3) **Платформа** — per-user OAuth, изоляция данных пользователей. Anthropic API [не использует данные для обучения](https://www.anthropic.com/policies/privacy-policy). Секреты (API-ключи, токены) хранятся в `~/.config/`, не в git. Подробнее: [LEARNING-PATH.md § 8.5](docs/LEARNING-PATH.md#85-безопасность-в-iwe).
 
 **Q: Claude видит мои пароли и API-ключи?**
 A: Нет. Claude Code видит только файлы в рабочей директории и исполняет только команды из whitelist (`.claude/settings.local.json`). Секреты хранятся в `~/.config/` и environment variables — за пределами рабочего пространства.

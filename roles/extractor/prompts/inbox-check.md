@@ -27,7 +27,7 @@
 
 ### Шаг 1: Проверить inbox
 
-1. Прочитай `/Users/user/Github/DS-strategy/inbox/captures.md`
+1. Прочитай `/Users/user/Github/DS-my-strategy/inbox/captures.md`
 2. Найди все pending записи (секции `### ...` без метки `[processed]`)
 3. Если pending записей нет → напиши в лог `No pending captures in inbox` и **заверши работу**
 4. Если pending > 5 → возьми первые 5 (по порядку в файле)
@@ -70,7 +70,7 @@
 
 ### Шаг 3: Сгенерировать Extraction Report
 
-Создай файл отчёта: `/Users/user/Github/DS-strategy/inbox/extraction-reports/{YYYY-MM-DD}-inbox-check.md`
+Создай файл отчёта: `/Users/user/Github/DS-my-strategy/inbox/extraction-reports/{YYYY-MM-DD}-inbox-check.md`
 
 Если файл с таким именем уже существует, добавь суффикс: `{YYYY-MM-DD}-inbox-check-2.md`.
 
@@ -89,7 +89,7 @@ remaining: M
 # Extraction Report (Inbox-Check)
 
 **Дата:** {YYYY-MM-DD}
-**Источник:** DS-strategy/inbox/captures.md
+**Источник:** DS-my-strategy/inbox/captures.md
 **Обработано captures:** N из {total pending}
 **Осталось:** M
 
@@ -135,7 +135,7 @@ remaining: M
 
 ### Шаг 4: Пометить обработанные captures
 
-В `DS-strategy/inbox/captures.md` — для каждого обработанного capture добавь метку `[processed YYYY-MM-DD]` к заголовку:
+В `DS-my-strategy/inbox/captures.md` — для каждого обработанного capture добавь метку `[processed YYYY-MM-DD]` к заголовку:
 
 **Было:** `### Паттерн X`
 **Стало:** `### Паттерн X [processed 2026-02-12]`
@@ -144,7 +144,7 @@ remaining: M
 
 1. Закоммить extraction report (новый)
 2. Закоммить captures.md (метки processed)
-3. Запушить DS-strategy
+3. Запушить DS-my-strategy
 
 **Сообщение коммита:** `inbox-check: N captures → extraction report {date}`
 
@@ -160,7 +160,7 @@ remaining: M
 
 > Когда пользователь говорит «review extraction report» или «apply KE report»:
 
-1. Прочитай последний отчёт из `DS-strategy/inbox/extraction-reports/`
+1. Прочитай последний отчёт из `DS-my-strategy/inbox/extraction-reports/`
 2. Покажи каждый кандидат пользователю
 3. Для accept — создай файл, закоммить в целевой Pack
 4. Для reject — записать причину в feedback-log.md

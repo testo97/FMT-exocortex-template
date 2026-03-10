@@ -2,7 +2,7 @@
 # daily-report.sh — ежедневный отчёт работы scheduler
 #
 # Формирует отчёт: что должно было сработать, что сработало, что нет.
-# Результат: DS-strategy/current/SchedulerReport YYYY-MM-DD.md
+# Результат: DS-my-strategy/current/SchedulerReport YYYY-MM-DD.md
 #
 # Использование:
 #   daily-report.sh           # сформировать отчёт за сегодня
@@ -13,7 +13,7 @@ set -euo pipefail
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 STATE_DIR="$HOME/.local/state/exocortex"
 LOG_DIR="/Users/user/logs/synchronizer"
-STRATEGY_DIR="/Users/user/Github/DS-strategy"
+STRATEGY_DIR="/Users/user/Github/DS-my-strategy"
 REPORT_DIR="$STRATEGY_DIR/current"
 ARCHIVE_DIR="$STRATEGY_DIR/archive/scheduler-reports"
 
@@ -211,7 +211,7 @@ $warnings
 **Что делать:**
 "
         if echo "$warnings" | grep -q "push failed" 2>/dev/null; then
-            report+="- **push failed:** Mac был оффлайн. Запусти \`cd /Users/user/Github/DS-strategy && git pull --rebase && git push\`
+            report+="- **push failed:** Mac был оффлайн. Запусти \`cd /Users/user/Github/DS-my-strategy && git pull --rebase && git push\`
 "
         fi
     else

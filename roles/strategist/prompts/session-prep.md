@@ -4,9 +4,9 @@
 
 ## Контекст
 
-- **HUB (личные планы):** /Users/user/Github/DS-strategy/current/
-- **Документы стратегии:** /Users/user/Github/DS-strategy/docs/ (ВСЕ файлы: Strategy.md, Dissatisfactions.md, Session Agenda.md)
-- **Inbox:** /Users/user/Github/DS-strategy/inbox/ ([fleeting-notes.md](https://github.com/testo97/DS-strategy/blob/main/inbox/fleeting-notes.md) + свежие файлы за неделю)
+- **HUB (личные планы):** /Users/user/Github/DS-my-strategy/current/
+- **Документы стратегии:** /Users/user/Github/DS-my-strategy/docs/ (ВСЕ файлы: Strategy.md, Dissatisfactions.md, Session Agenda.md)
+- **Inbox:** /Users/user/Github/DS-my-strategy/inbox/ ([fleeting-notes.md](https://github.com/testo97/DS-my-strategy/blob/main/inbox/fleeting-notes.md) + свежие файлы за неделю)
 - **SPOKE (планы репо):** /Users/user/Github/*/WORKPLAN.md
 - **Стратегические карты:** /Users/user/Github/*/MAPSTRATEGIC.md (если есть в репо)
 - **MEMORY:** ~/.claude/projects/-Users-user-Github/memory/MEMORY.md
@@ -14,7 +14,7 @@
 ## Именование файлов в current/
 
 ```
-DS-strategy/
+DS-my-strategy/
 ├── current/
 │   ├── WeekPlan W{N} YYYY-MM-DD.md    # план недели (Пн дата)
 │   ├── WeekReport W{N} YYYY-MM-DD.md  # отчёт недели (авто, Пн 00:00)
@@ -24,7 +24,7 @@ DS-strategy/
 ├── inbox/                              # fleeting-notes.md + входящие
 ```
 
-В `current/` — только актуальные файлы. Старые перемещаются в `DS-strategy/archive/`.
+В `current/` — только актуальные файлы. Старые перемещаются в `DS-my-strategy/archive/`.
 
 ## Предусловие
 
@@ -38,17 +38,17 @@ DS-strategy/
 
 #### 1. Прочитать WeekReport (→ блок «Ревью прошлой недели»)
 
-- Найди `WeekReport W*.md` в `DS-strategy/current/`
+- Найди `WeekReport W*.md` в `DS-my-strategy/current/`
 - Извлеки: completion rate, carry-over, инсайты
 
 > Если WeekReport не найден — сообщить об ошибке и собрать коммиты самостоятельно (fallback).
 
 #### 2. Обработать inbox (→ блок «Разбор inbox и исчезающих заметок»)
 
-- Прочитай `DS-strategy/inbox/fleeting-notes.md`
-- Прочитай ВСЕ файлы из `DS-strategy/inbox/` (кроме .DS_Store и .docx)
+- Прочитай `DS-my-strategy/inbox/fleeting-notes.md`
+- Прочитай ВСЕ файлы из `DS-my-strategy/inbox/` (кроме .DS_Store и .docx)
 - Если есть `inbox/inbox-triage.md` — прочитай (непотреблённый Note-Review triage за пятницу/выходные)
-- Прочитай `DS-strategy/inbox/unsatisfied-questions.md` — **структурированный отчёт** из feedback_triage DB: замечания (✏️) первые, urgent (high/critical) вторые, кластеры проблем третьи. Auto-triage уже выполнен ботом → Session-Prep проверяет кластеры (≥3 = **urgent** → WP-debt) и помечает resolved
+- Прочитай `DS-my-strategy/inbox/unsatisfied-questions.md` — **структурированный отчёт** из feedback_triage DB: замечания (✏️) первые, urgent (high/critical) вторые, кластеры проблем третьи. Auto-triage уже выполнен ботом → Session-Prep проверяет кластеры (≥3 = **urgent** → WP-debt) и помечает resolved
 - Для каждой заметки/файла определи: → в план недели? → capture в Pack? → в повестку для обсуждения? → удалить?
 - **Недельная агрегация Inbox Triage:**
   > Это НЕ дубль ежедневного triage Note-Review. Note-Review классифицирует заметки и пишет предложения в целевые документы. Session-Prep агрегирует результаты за неделю из этих документов + добавляет unsatisfied-questions.
@@ -68,14 +68,14 @@ DS-strategy/
 
 #### 3. Проверить неудовлетворённости (→ блок «НЭП»)
 
-- Прочитай `DS-strategy/docs/Dissatisfactions.md`
+- Прочитай `DS-my-strategy/docs/Dissatisfactions.md`
 - Проверь: какие операционные НЭП разрешены (можно закрыть)?
 - Проверь: есть ли стратегические НЭП без привязки к РП на этой неделе?
 - Сформируй блок повестки с предложениями
 
 #### 4. Сверка со стратегией + агрегация MAPSTRATEGIC (→ блок «Стратегическая сверка»)
 
-- Прочитай `DS-strategy/docs/Strategy.md` — фокусы года, Q1 цели, приоритеты месяца
+- Прочитай `DS-my-strategy/docs/Strategy.md` — фокусы года, Q1 цели, приоритеты месяца
 - Прочитай `/Users/user/Github/*/MAPSTRATEGIC.md` (если файл есть в репо)
 - **MCP-контекст:** `knowledge-mcp search("текущий фокус обучения", source_type="guides")` → рекомендации по руководствам для плана недели
 - **Агрегируй** фазы из MAPSTRATEGIC.md → обнови секцию «Текущие фазы (MAPSTRATEGIC)» в Strategy.md
@@ -91,7 +91,7 @@ DS-strategy/
 
 #### 6. Проверить нерегулярные блоки (Session Agenda)
 
-- Прочитай `DS-strategy/docs/Session Agenda.md`
+- Прочитай `DS-my-strategy/docs/Session Agenda.md`
 - Определи: какие нерегулярные блоки применимы на этой неделе? (ретро, архитектура, разбор документа и др.)
 - Если есть — добавь в повестку
 
@@ -128,7 +128,7 @@ DS-strategy/
    - `inbox-triage.md` — удали после потребления на шаге 2 (данные включены в WeekPlan)
    - Прочие файлы (не fleeting-notes.md, не captures.md, не активные WP-*) → «Ещё нужен?» Нет → удали или `archive/notes/`
 7. Создай `current/WeekPlan W{N} YYYY-MM-DD.md` (Пн текущей недели)
-8. Закоммить в DS-strategy
+8. Закоммить в DS-my-strategy
 
 **Формат WeekPlan:**
 

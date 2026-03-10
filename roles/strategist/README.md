@@ -10,7 +10,7 @@
 ## Архитектура: Промпты → Стратег → Результаты
 
 ```
-FMT-exocortex-template/              DS-strategy/ (отдельный репо)
+FMT-exocortex-template/              DS-my-strategy/ (отдельный репо)
   roles/strategist/                     current/
     prompts/                              WeekPlan W{N}.md
       session-prep.md                     WeekReport W{N}.md
@@ -28,7 +28,7 @@ FMT-exocortex-template/              DS-strategy/ (отдельный репо)
 
 **Потоки данных:**
 - Промпты (PLATFORM) → обновляются через `update.sh`
-- Результаты (PERSONAL) → DS-strategy/ (отдельный приватный репо, не затрагивается обновлениями)
+- Результаты (PERSONAL) → DS-my-strategy/ (отдельный приватный репо, не затрагивается обновлениями)
 - Входные данные: MEMORY.md, MAPSTRATEGIC.md (из каждого репо), WakaTime
 
 ---

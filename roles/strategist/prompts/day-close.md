@@ -7,9 +7,9 @@
 
 ## Контекст
 
-- **WeekPlan:** /Users/user/Github/DS-strategy/current/WeekPlan W*.md (последний по дате)
+- **WeekPlan:** /Users/user/Github/DS-my-strategy/current/WeekPlan W*.md (последний по дате)
 - **MEMORY:** ~/.claude/projects/-Users-user-Github/memory/MEMORY.md
-- **Exocortex backup:** /Users/user/Github/DS-strategy/exocortex/
+- **Exocortex backup:** /Users/user/Github/DS-my-strategy/exocortex/
 
 ## Алгоритм
 
@@ -28,7 +28,7 @@ git -C /Users/user/Github/<repo> log --since="today 00:00" --oneline --no-merges
 
 ### 2. Обновить WeekPlan
 
-Найди текущий `WeekPlan W*.md` в `DS-strategy/current/` и обнови:
+Найди текущий `WeekPlan W*.md` в `DS-my-strategy/current/` и обнови:
 
 - Пометь завершённые РП как **done**
 - Обнови статусы partial с описанием прогресса
@@ -44,20 +44,20 @@ git -C /Users/user/Github/<repo> log --since="today 00:00" --oneline --no-merges
 
 ### 4. Backup экзокортекса
 
-Скопируй актуальные файлы в `/Users/user/Github/DS-strategy/exocortex/`:
+Скопируй актуальные файлы в `/Users/user/Github/DS-my-strategy/exocortex/`:
 
 ```bash
 # Корневой CLAUDE.md
-cp /Users/user/Github/CLAUDE.md /Users/user/Github/DS-strategy/exocortex/CLAUDE.md
+cp /Users/user/Github/CLAUDE.md /Users/user/Github/DS-my-strategy/exocortex/CLAUDE.md
 
 # Memory (Слой 3)
-cp ~/.claude/projects/-Users-user-Github/memory/MEMORY.md /Users/user/Github/DS-strategy/exocortex/MEMORY.md
-cp ~/.claude/projects/-Users-user-Github/memory/*.md /Users/user/Github/DS-strategy/exocortex/
+cp ~/.claude/projects/-Users-user-Github/memory/MEMORY.md /Users/user/Github/DS-my-strategy/exocortex/MEMORY.md
+cp ~/.claude/projects/-Users-user-Github/memory/*.md /Users/user/Github/DS-my-strategy/exocortex/
 ```
 
 ### 5. Закоммитить
 
-- Закоммить все изменения в `DS-strategy` (WeekPlan + exocortex backup)
+- Закоммить все изменения в `DS-my-strategy` (WeekPlan + exocortex backup)
 - Запуши
 
 ## Правила
